@@ -8,7 +8,7 @@ class SymbolicYank < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args, "./main.go"
+    system "go", "build", "-o", bin/"symbol-yank", "./main.go"
   end
 
   test do
